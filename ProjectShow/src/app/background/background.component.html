@@ -1,0 +1,70 @@
+<po-page-detail
+  [p-breadcrumb]="breadcrumb"
+  [p-literals]="customLiterals"
+  [p-title]="title">
+
+  <!-- <div class="po-row">
+    <po-info
+      class="po-md-12"
+      p-label="Action"
+      [p-value]="action">
+    </po-info>
+  </div> -->
+
+  <hr>
+
+  <form #f="ngForm">
+    <div class="po-row">
+      <po-input
+        class="po-md-12"
+        p-label="Id hash Employer:">
+      </po-input>
+    </div>
+  </form>
+
+  <hr>
+
+  <form #formBreadcrumbParams="ngForm">
+    <div class="po-row">
+      <po-input
+        class="po-md-6"
+        name="breadcrumbParamsProperty"
+        [(ngModel)]="breadcrumbParams.property"
+        p-clean
+        p-label="Breadcrumb params property"
+        p-required>
+      </po-input>
+
+      <po-input
+        class="po-md-6"
+        name="breadcrumbParamsValue"
+        [(ngModel)]="breadcrumbParams.value"
+        p-clean
+        p-label="Breadcrumb params value"
+        p-required>
+      </po-input>
+    </div>
+
+    <div class="po-row">
+      <po-button
+        class="po-md-6 po-lg-4"
+        p-label="Add breadcrumb params"
+        [p-disabled]="formBreadcrumbParams.invalid"
+        (p-click)="addBreadcrumbParam()">
+      </po-button>
+    </div>
+  </form>
+
+    <div class="po-row">
+      <po-input
+        class="po-lg-12"
+        name="literals"
+        [(ngModel)]="literals"
+        p-help='Ex.: {"back": "Retornar", "edit": "Edição", "remove": "Excluir registro"}'
+        p-label="Literals"
+        (p-change)="changeLiterals()">
+      </po-input>
+    </div>
+
+  
+</po-page-detail>

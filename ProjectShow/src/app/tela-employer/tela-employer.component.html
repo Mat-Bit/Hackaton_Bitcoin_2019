@@ -1,0 +1,65 @@
+<po-page-detail
+  [p-breadcrumb]="breadcrumb"
+  [p-literals]="customLiterals"
+  [p-title]="title">
+
+  <!-- <div class="po-row">
+    <po-info
+      class="po-md-12"
+      p-label="Action"
+      [p-value]="action">
+    </po-info>
+  </div> -->
+
+  <hr>
+
+  <form #f="ngForm">
+    <div class="po-row">
+      <po-input
+        class="po-md-12"
+        name=""
+        [(ngModel)]="title"
+        p-label="Descrição cargo:">
+      </po-input>
+    </div>
+
+    <hr>
+
+    <form #f="ngForm">
+        <div class="po-row">
+          <po-input
+            class="po-md-12"
+            name=""
+            [(ngModel)]="title"
+            p-label="Competências necessárias:">
+          </po-input>
+        </div>
+    </form>
+    
+    <hr>
+
+    <form #f="ngForm">
+        <div class="po-row">
+          <po-input
+            class="po-md-12"
+            name="Valor"
+            placeholder="100,00"
+            
+            p-label="Valor oferecido:">
+          </po-input>
+        </div>
+    </form>
+
+    <hr>
+
+    <div class="po-row">
+      <po-button
+        class="po-md-3"
+        p-label="Salvar Informações"
+        (p-click)="restore()">
+      </po-button>
+    </div>
+
+
+  </form>
+</po-page-detail>
